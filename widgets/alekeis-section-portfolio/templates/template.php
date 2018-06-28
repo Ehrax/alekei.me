@@ -22,10 +22,10 @@
             <div class="section-portfolio-content-right">
                 <h3><?php echo wp_kses_post($instance['title']); ?></h3>
                 <p><?php echo wp_kses_post($instance['description'])?>
-                <? if(count(wp_kses_post($instance['url'])) != 0): ?>
+                <?php if(count(wp_kses_post($instance['url'])) != 0): ?>
                     <a href="http://<?php echo wp_kses_post($instance['url'])?>" target="_blank">View</a>
                     <br></p>
-                <? endif; ?>
+                <?php endif; ?>
                 <?php 
                     $techs_used = get_tech_variables($instance, $args);
                     if (count($techs_used) != 0): ?>

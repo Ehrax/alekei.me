@@ -2,13 +2,13 @@
 	<div class="alekei-footer-social">
 		<div class="uk-flex">
 			<div class="uk-animation-toggle footer-page-link">
-				<a href="<? echo the_field('facebook'); ?>" uk-icon="icon: facebook" class="uk-animation-slide-top-small"></a>
+				<a href="<?php echo the_field('facebook'); ?>" uk-icon="icon: facebook" class="uk-animation-slide-top-small"></a>
 			</div>
 			<div class="uk-animation-toggle footer-page-link">
-				<a href="<? echo the_field('instagram'); ?>" uk-icon="icon: instagram" class="uk-animation-slide-top-small"></a>
+				<a href="<?php echo the_field('instagram'); ?>" uk-icon="icon: instagram" class="uk-animation-slide-top-small"></a>
 			</div>
 			<div class="uk-animation-toggle footer-page-link">
-				<a href="<? echo the_field('github'); ?>" uk-icon="icon: github" class="uk-animation-slide-top-small"></a>
+				<a href="<?php echo the_field('github'); ?>" uk-icon="icon: github" class="uk-animation-slide-top-small"></a>
 			</div>
 		</div>
 	</div>

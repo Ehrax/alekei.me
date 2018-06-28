@@ -1,0 +1,44 @@
+footer {
+    background-color: $primary-color;
+
+    .footer-page-link-home {
+        cursor: pointer;
+        color: $secondary-color;
+        background-color: $deep-space-sparkle;
+        margin-top: -25px;
+        padding: 10px 8px 10px 8px;
+
+        &:hover {
+            color: $secondary-color;
+            cursor: pointer;
+            transform: scale(0.9);
+        }
+
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .footer-page-link-instagram {
+        cursor: pointer;
+        color: $secondary-color;
+        background-color: darken($primary-color, 5%);
+        padding: 10px 8px 10px 8px;
+
+        &:hover {
+            background-color: #F77979;
+            transform: scale(0.9);
+        }
+    }
+
+    .footer-credits {
+        padding: 10px 0 20px 0;
+        font-size: 8pt;
+        font-family: $secondary-font;
+
+        p  {
+            margin: 0;
+            color: rgba($secondary-color, 0.6);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import "./styles/global-vars";
+@import "./styles/base";
+
+/**
+* ------------------------------------------------------------------------------
+* Ui - Kit Imports
+* ------------------------------------------------------------------------------
+**/
+
+@import "uikit/src/scss/variables.scss";
+@import "uikit/src/scss/mixins.scss";
+
+/**
+* ------------------------------------------------------------------------------
+* custom imports
+* ------------------------------------------------------------------------------
+**/
+@import "./styles/hero";
+@import "./styles/navbar";
+@import "./styles/offcanvas";
+@import "./styles/footer";
+@import "./styles/section-header";
+@import "./styles/section-spacer";
+@import "./styles/section-about";
+@import "./styles/section-portfolio";
+
+@import "uikit/src/scss/uikit.scss";
+
+// this sucks
+@import "./styles/_ukit-overrides";

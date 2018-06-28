@@ -3,6 +3,13 @@
 		<div class="uk-position-top">
 			<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
 				<div class="uk-navbar-right">
+					<?php 
+						wp_nav_menu( array(
+							'theme_location' => 'top_menu',
+							'container' => false,
+							'items_wrap' => '<ul class="uk-navbar-nav uk-visible@m" uk-scrollspy-nav="scroll: true" uk-scroll>%3$s</ul>',
+						));
+					?>
 					<a uk-navbar-toggle-icon="" 
 						href="#offcanvas-menu" 
 						uk-toggle="" 

@@ -3,16 +3,9 @@ $svg-widht: 400px;
 
 .section-spacer {
     background-color: $primary-color;
-    padding: $padding;
+    color: $secondary-color;
 
-    .svg {
-        width: $svg-widht;
-    }
-
-    .no-svg {
-        height: 50px;
-        width: $svg-widht;
-    }
+    padding: 30px;
 
     @media screen and (max-width: $breakpoint-small) {
         .svg {

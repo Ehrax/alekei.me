@@ -1,23 +1,63 @@
-.so-widget-sow-simple-masonry {
-    max-width: 1200px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.section-portfolio {
+    max-width: 900px;
+    margin: auto;
     padding-left: 15px;
     padding-right: 15px;
 
-    @media (min-width: $breakpoint-medium) {
-        margin-top: 75px;
-        magin-bottom: 75px;
-        padding-left: 40px;
-        padding-right: 40px;
+    .uk-slider, .uk-slider-items, li, .portfolio-picture {
+        height: 100%;
     }
 
-    @media (min-width: $breakpoint-small) {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding-left: 30px;
-        padding-right: 30px;
+    .uk-slider {
+        .uk-slider-items {
+            li {
+                width: 100%;
+
+                .portfolio-picture {
+                    background-position: center;
+                    background-size: cover;
+                }
+
+                .uk-overlay-primary {
+                    background-color: rgba($primary-color, 0.70);
+                    transition: 0.4s;
+
+                    &:hover {
+                        background-color: rgba($primary-color, 0.10);
+                    }
+                }
+            }
+        }
+    }
+
+    h3 {
+        color: $primary-color;
+        font-family: $secondary-font;
+    }
+
+    p {
+        color: $primary-color;
+    }
+
+    .section-portfolio-content-left {
+        min-height: 300px;
+        width: 100%
+    }
+
+    .section-portfolio-content-right {
+        width: 100%;
+
+        a {
+            color: $blue;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    .uk-badge {
+        color: $secondary-color;
+        background-color: $primary-color;
     }
 }

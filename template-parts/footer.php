@@ -7,6 +7,9 @@
 			<div class="uk-animation-toggle footer-page-link">
 				<a href="<? echo the_field('instagram'); ?>" uk-icon="icon: instagram" class="uk-animation-slide-top-small"></a>
 			</div>
+			<div class="uk-animation-toggle footer-page-link">
+				<a href="<? echo the_field('github'); ?>" uk-icon="icon: github" class="uk-animation-slide-top-small"></a>
+			</div>
 		</div>
 	</div>
 	<div class="alekei-footer-credits">

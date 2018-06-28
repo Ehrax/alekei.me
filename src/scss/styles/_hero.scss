@@ -33,6 +33,16 @@ $hero-subtitle-font-size: 1.8rem;
         font-weight: 300;
     }
 
+    .page-link-portfolio {
+        color: $secondary-color;
+
+        margin-top: 15px;
+
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+
     @media screen and (max-width: $breakpoint-small) {
         margin-left: 0;
 

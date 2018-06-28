@@ -6,7 +6,7 @@ $section-about-heading-left: 60px;
     .content {
         margin: auto;
         padding: 15px;
-        max-width: 710px;
+        max-width: 720px;
     }
 
     .section-about-pic {
@@ -18,11 +18,10 @@ $section-about-heading-left: 60px;
     }
 
     .toolbox {
-        margin-top: 30px;
         div:first-child {
             div {
                 padding: 15px;
-                width: 50px;
+                font-size: 50px;
             }
         }
     }

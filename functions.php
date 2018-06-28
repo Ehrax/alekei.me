@@ -22,7 +22,7 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
  * ---------------------------------------------------------------------------------------------------------------------
  */
 function alekeis_scripts() {
-    $manifest = json_decode(file_get_contents('dist/assets.json', true));
+    $manifest = json_decode(file_get_content('dist/assets.json', true));
     $main = $manifest->main;
     wp_enqueue_style('alekeis-css', get_template_directory_uri() . '/dist/' . $main->css, false, null);
     wp_enqueue_script('alekeis-script', get_template_directory_uri() . '/dist/' . $main->js, null, true);

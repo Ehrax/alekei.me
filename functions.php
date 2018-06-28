@@ -102,9 +102,9 @@ function custom_wp_nav_menu($var) {
   function current_to_active($text){
       $replace = array(
           //List of menu item classes that should be changed to "active"
-          'current_page_item' => 'uk-active',
-          'current_page_parent' => 'uk-active',
-          'current_page_ancestor' => 'uk-active',
+          'current_page_item' => '',
+          'current_page_parent' => '',
+          'current_page_ancestor' => '',
       );
       $text = str_replace(array_keys($replace), $replace, $text);
           return $text;

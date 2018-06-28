@@ -1,32 +1,43 @@
-$hero-title-font-size: 7.5rem;
-$hero-subtitle-font-size: 2rem;
+$hero-title-font-size: 3.0rem;
+$hero-subtitle-font-size: 1.8rem;
 
-.header-content {
-    background-color: rgba($primary-color, 0.5);
-    padding: 10px 0 15px 0;
+.alekei-hero {
+    .canvas {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.alekei-hero-content {
 
     .hero-title {
+        text-align: center;
         color: $secondary-color;
         font-family: $pirmary-font;
         font-size: $hero-title-font-size;
-        text-transform: uppercase;
         margin: 0;
-        line-height: 0.9;
+
+        span {
+            color: $orange;
+        }
     }
 
     .hero-subtitle {
         color: $secondary-color;
         margin: 0;
+        margin-top: 10px; 
         font-family: $secondary-font;
         font-size: $hero-subtitle-font-size;
-        text-transform: lowercase;
+        font-weight: 300;
     }
 
     @media screen and (max-width: $breakpoint-small) {
         margin-left: 0;
 
         .hero-title {
-            font-size: $hero-title-font-size * 0.6;
+            font-size: $hero-title-font-size * 0.5;
         }
         
         .hero-subtitle {

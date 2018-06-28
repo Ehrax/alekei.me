@@ -44,11 +44,11 @@
 
 footer {
     a, .uk-link {
-        color: lighten($deep-space-sparkle, 10%);
+        color: lighten($primary-color, 10%);
     }
 
     a:hover, a:focus, .uk-link:hover, .uk-link:focus {
-        color: lighten($deep-space-sparkle, 10%);
+        color: lighten($primary-color, 10%);
     }
 }
 
@@ -64,4 +64,32 @@ footer {
     @media (min-width: $breakpoint-medium) {  
         padding-top: 0;
     }
+}
+
+
+/**
+* ------------------------------------------------------------------------------
+* offcanvas impressum
+* ------------------------------------------------------------------------------
+**/
+.offcanvas-impressum {
+
+    h3 {
+        color: $primary-color;
+    }
+
+    h4 {
+        color: $primary-color;
+    }
+
+    p {
+        color: $primary-color;
+        margin: 0;
+    }
+
+    @media (min-width: 960px) {
+        .uk-offcanvas-bar {
+            width: 50%;
+        }
+    } 
 }

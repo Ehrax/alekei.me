@@ -1,0 +1,96 @@
+.section-contact {
+    padding-top: 0;
+    padding-bottom: 80px;
+    background-color: $primary-color;
+    color: $secondary-color;
+
+    .header {
+        padding: 50px;
+
+        h1 {
+            color: $secondary-color;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-family: $pirmary-font;
+        }
+
+        .header-bar {
+            width: 100px;
+            height: 5px;
+            background: $secondary-color;
+        }
+    }
+
+    .question {
+        font-weight: 300;
+        color: $orange;
+        p {
+            margin: 0;
+        }
+    }
+
+    .form {
+        max-width: 500px;
+        margin: 30px auto 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        input[type="text"], input[type="email"], textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            border: 0;
+            padding: 10px 15px;
+            background: $primary-color-ligher;
+            font-size: 12pt;
+            margin-bottom: 3px;
+            color: $secondary-color;
+        }
+    
+        textarea {
+            min-height: 150px;
+            margin-bottom: 5px;
+            max-width: 500px;
+          }
+    
+        .button {
+            width: 150px;
+            margin: 5px 0 0 0;
+            font-size: 12pt;
+            padding: 10px 30px;
+            font-weight: 300;
+            color: $secondary-color;
+            background: transparent;
+            outline: 0;
+            border-color: $secondary-color;
+    
+            &:hover {
+                background: $red;
+                border-color: $red;
+            }
+        }
+    }
+
+
+
+    .alekei-page-link-home {
+        cursor: pointer;
+        color: $secondary-color;
+        background-color: lighten($primary-color-ligher, 5%);
+        margin-top: -25px;
+        padding: 10px 8px 10px 8px;
+
+        &:hover {
+            color: $secondary-color;
+            background-color: $red;
+            cursor: pointer;
+            transform: scale(0.9);
+        }
+
+        a:hover {
+            color: $secondary-color;
+        }
+    }
+}

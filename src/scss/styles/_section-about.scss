@@ -1,79 +1,40 @@
 $section-about-heading-left: 60px;
 
 .section-about {
+    text-align: center;
 
-    .section-about-left {
-        
-        text-align: center;
+    .content {
+        margin: auto;
+        padding: 15px;
+        max-width: 710px;
+    }
 
-        > div { 
-            height: 50%;
+    .section-about-pic {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+    }
 
+    .toolbox {
+        margin-top: 30px;
+        div:first-child {
             div {
-                height: 100%;
-                background-size: cover;
-                background-position: center;
+                padding: 15px;
+                width: 50px;
             }
-        } 
-
-        h1 {
-            font-family: $pirmary-font;
-            text-transform: uppercase;
-            font-size: $section-about-heading-left;
-            line-height: 1.1;
-            margin-bottom: 0;
-        }
-
-        @media (max-width: $breakpoint-medium) {   
-            min-height: 400px;
         }
     }
 
-    .section-about-middle {
-        height: 550px;
-
-        div {
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
+    p {
+        margin: 0;
+        margin-top: 15px;
     }
 
-    .section-about-right {
-        > div {
-            height: 50%;
-            text-align: center;
-
-            div {
-                height: 100%;
-                background-size: cover;
-                background-position: center;
-            }
-        }
-
-        .section-about-right-text {
-            margin-top: 15px;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-
-        @media (max-width: $breakpoint-medium) {   
-            min-height: 400px;
-        }
-    }
-
-
-    @media (max-width: $breakpoint-medium) {  
-
-        .section-about-left {
-            img {
-                margin-top: 0;
-            }
-
-            h1 {
-                font-size: $section-about-heading-left * 0.8;
-            }
-        }
+    h2 {
+        font-family: $secondary-font;
+        margin-bottom: 0;
+        margin-top: 15px;
     }
 }

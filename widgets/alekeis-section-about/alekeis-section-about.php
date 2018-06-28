@@ -29,24 +29,6 @@ class Alekeis_Section_About extends SiteOrigin_Widget {
 
       //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
       array( 
-        'heading_left' => array(
-          'type' => 'text',
-          'label' => __('Heading Left', 'widget-form-fields-text-domain')
-        ),
-        'picture_left' => array(
-          'type' => 'media',
-          'label' => __( 'Choose the left image', 'widget-form-fields-text-domain' ),
-          'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
-          'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
-          'library' => 'image',
-        ),
-        'picture_middle' => array(
-          'type' => 'media',
-          'label' => __( 'Choose the middle image', 'widget-form-fields-text-domain' ),
-          'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
-          'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
-          'library' => 'image',
-        ),
         'picture_right' => array(
           'type' => 'media',
           'label' => __( 'Choose the right image', 'widget-form-fields-text-domain' ),
@@ -56,7 +38,7 @@ class Alekeis_Section_About extends SiteOrigin_Widget {
         ),
         'about_description' => array(
           'type' => 'textarea',
-          'label' => __( 'Description on the right side of the About Page', 
+          'label' => __( 'Description on the left side of the About Page', 
                         'widget-form-fields-text-domain' ),
           'rows' => 10
         )

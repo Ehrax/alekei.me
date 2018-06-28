@@ -1,44 +1,57 @@
 footer {
-    background-color: $primary-color;
+    color: $secondary-color;
+    background-color: $primary-color-ligher;
+    text-align: center;
+    font-family: $secondary-font;
 
-    .footer-page-link-home {
+    .alekei-footer-social {
+        padding-top: 50px;
+    }
+
+    .footer-page-link {
+        background-color: lighten($primary-color-ligher, 5%);
         cursor: pointer;
-        color: $secondary-color;
-        background-color: $deep-space-sparkle;
-        margin-top: -25px;
-        padding: 10px 8px 10px 8px;
+        padding: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
 
-        &:hover {
+        a:hover, a:focus {
             color: $secondary-color;
-            cursor: pointer;
-            transform: scale(0.9);
         }
 
-        a:hover {
-            color: $secondary-color;
+        &:hover {
+            background-color: $red;
+            transform: scale(0.95);
         }
     }
 
-    .footer-page-link-instagram {
-        cursor: pointer;
-        color: $secondary-color;
-        background-color: darken($primary-color, 5%);
-        padding: 10px 8px 10px 8px;
+    .alekei-footer-credits {
+        font-size: 13px;
+        font-weight: 300;
+        padding-top: 30px;
+        padding-bottom: 50px;
 
-        &:hover {
-            background-color: #F77979;
-            transform: scale(0.9);
+        .alekei-footer-credits-owner {
+            margin-bottom: 5px;
+
+            span {
+                color: $orange;
+            }
+
+            p {
+                margin: 0;
+            }
         }
-    }
 
-    .footer-credits {
-        padding: 10px 0 20px 0;
-        font-size: 8pt;
-        font-family: $secondary-font;
+        .alekei-footer-credits-impressum {
+            p {
+                cursor: pointer;
+                color: $secondary-color;
 
-        p  {
-            margin: 0;
-            color: rgba($secondary-color, 0.6);
+                &:hover {
+                    color: $red;
+                }
+            }
         }
     }
 }

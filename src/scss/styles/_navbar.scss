@@ -1,29 +1,36 @@
+$navbar-nav-item-height: 50px;
+
+@mixin hook-navbar() {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
 @mixin hook-navbar-nav-item() {
-    opacity: 0.7;
+    opacity: 1;
     color: $secondary-color;
     font-family: $secondary-font;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 1px;
 }
 
 @mixin hook-navbar-nav-item-hover() {
-    opacity: 1;
-    color: $secondary-color;
+    color: $orange;
 }
 
 @mixin hook-navbar-nav-item-onclick() { 
-    opacity: 1;
-    color: $secondary-color;
+    color: $orange;
 }
 
 @mixin hook-navbar-nav-item-active() {
-    opacity: 1;
-    color: $secondary-color;
+    color: $orange;
 }
 
 @mixin hook-navbar-toggle-icon() {
-    opacity: 1;
     color: $secondary-color;
 }
 
 @mixin hook-navbar-toggle-icon-hover() {
-    color: $secondary-color;
+    color: $orange;
 }

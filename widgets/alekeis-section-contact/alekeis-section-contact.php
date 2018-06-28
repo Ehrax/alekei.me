@@ -1,27 +1,27 @@
 <?php
 
 /*
-Widget Name: Alekeis Section Spacer
-Description: a simple widget
+Widget Name: Alekeis Section Contact
+Description: add a nice contact fom with a section :)
 Author: Alexander Rasputin
 Author URI: https://alekei.me
 Widget URI: https://alekei.me
 */
 
-class Alekeis_Section_Spacer extends SiteOrigin_Widget {
+class Alekeis_Section_Contact extends SiteOrigin_Widget {
   function __construct() {
     //Call the parent constructor with the required arguments.
     parent::__construct(
       // The unique id for your widget.
-      'alekeis_section_spacer',
+      'alekeis_section_contact',
 
       // The name of the widget for display purposes.
-      'Alekeis Section Spacer',
+      'Alekeis Section Contact',
 
       // The $widget_options array, which is passed through to WP_Widget.
       // It has a couple of extras like the optional help URL, which should link to your sites help or support page.
       array(
-          'description' => 'A simple spacer, with or without a tattoo needle',
+          'description' => 'a cool contact section :)',
       ),
 
       //The $control_options array, which is passed through to WP_Widget
@@ -46,4 +46,4 @@ class Alekeis_Section_Spacer extends SiteOrigin_Widget {
 
 }
 
-siteorigin_widget_register('alekeis_section_spacer', __FILE__, 'Alekeis_Section_Spacer');
+siteorigin_widget_register('alekeis_section_contact', __FILE__, 'Alekeis_Section_contact');

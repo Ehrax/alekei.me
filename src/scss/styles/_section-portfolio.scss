@@ -17,15 +17,6 @@
                     background-position: center;
                     background-size: cover;
                 }
-
-                .uk-overlay-primary {
-                    background-color: rgba($primary-color, 0.70);
-                    transition: 0.4s;
-
-                    &:hover {
-                        background-color: rgba($primary-color, 0.10);
-                    }
-                }
             }
         }
 

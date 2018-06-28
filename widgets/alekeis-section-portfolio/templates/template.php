@@ -10,7 +10,6 @@
                             <?php foreach($images as $img): ?>
                                 <li uk-lightbox>
                                     <div class="portfolio-picture" data-src="<?php echo wp_get_attachment_url($img); ?>" uk-img></div>
-                                    <div class="uk-overlay-primary uk-position-cover"></div>
                                 </li>
                             <?php endforeach; ?>
                         <?php endif; ?>

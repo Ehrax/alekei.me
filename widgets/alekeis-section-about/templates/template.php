@@ -18,60 +18,6 @@
         </div>
             <div class="toolbox">
                 <div class="uk-grid-collapse items" uk-grid>
-                    <!-- <div>
-                        <i class="devicon-android-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-angularjs-plain"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-bootstrap-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-docker-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-git-plain"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-html5-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-java-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-javascript-plain"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-jquery-plain-wordmark"></i> 
-                    </div>
-                    <div>
-                        <i class="devicon-mongodb-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-mysql-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-nginx-original-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-nodejs-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-php-plain"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-sass-original"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-webpack-plain"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-wordpress-plain-wordmark"></i>
-                    </div>
-                    <div>
-                        <i class="devicon-python-plain-wordmark"></i>
-                    </div> -->
                     <?php 
                     $devicons = get_devicons($instance, $args);
                     if(count(devicons) != 0): ?>

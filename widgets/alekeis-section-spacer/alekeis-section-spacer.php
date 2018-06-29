@@ -28,8 +28,27 @@ class Alekeis_Section_Spacer extends SiteOrigin_Widget {
       array(),
 
       //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
-      array( ),
-
+      array(
+        'spacer_content' => array(
+          'type' => 'repeater',
+          'label' => __( 'Add Content' , 'widget-form-fields-text-domain' ),
+          'item_name'  => __('Spacer Content', 'siteorigin-widgets' ),
+          'fields' => array(
+            'icon' => array(
+              'type' => 'text',
+              'label' => __('Uikit Icon Name', 'widget-form-fields-text-domain')
+            ),
+            'title' => array(
+              'type' => 'text',
+              'label' => __('Content Title', 'widget-form-fields-text-domain')
+            ),
+            'description' => array(
+              'type' => 'textarea',
+              'label' => __('Content Description', 'widget-form-fields-text-domain')
+            ),
+          )
+        ),
+      ),
       //The $base_folder path string.
       plugin_dir_path(__FILE__)
     );

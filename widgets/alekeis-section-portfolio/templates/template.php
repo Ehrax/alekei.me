@@ -1,6 +1,40 @@
-<div class="uk-section section-portfolio uk-height-viewport" uk-height-viewport="offset-top: true">
-    <!-- TODO new portfolio design :) -->
-
+<div class="uk-section uk-section-default section-portfolio uk-height-viewport <?php if(wp_kses_post($instance['position'])): // TODO  ?> <?php endif;?>" uk-height-viewport="offset-top: true">
+    <div class="container">
+        <div class="uk-child-width-expand@s uk-grid-small" uk-grid>
+            <div class="section-portfolio-content-left">
+                <div class="uk-position-relative " uk-slider="center: true">
+                    <ul class="uk-slider-items uk-child-width-1-2">
+                        <?php 
+                            $images = get_img_variables($instance, $args);
+                            if(count($images) != 0): ?>
+                            <?php foreach($images as $img): ?>
+                                <li uk-lightbox>
+                                    <div class="portfolio-picture" data-src="<?php echo wp_get_attachment_url($img); ?>" uk-img></div>
+                                </li>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                </div>
+            </div>
+            <div class="section-portfolio-content-right">
+                <h3><?php echo wp_kses_post($instance['title']); ?></h3>
+                <p><?php echo wp_kses_post($instance['description'])?>
+                <?php if(count(wp_kses_post($instance['url'])) != 0): ?>
+                    <a href="http://<?php echo wp_kses_post($instance['url'])?>" target="_blank">View</a>
+                    <br></p>
+                <?php endif; ?>
+                <?php 
+                    $techs_used = get_tech_variables($instance, $args);
+                    if (count($techs_used) != 0): ?>
+                        <?php foreach($techs_used as $tech):?>
+                            <span class="uk-badge"><?php echo $tech; ?></span>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+            </div>
+        </div>
+    </div>
 </div>
 
                 

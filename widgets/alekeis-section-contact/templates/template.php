@@ -26,7 +26,9 @@
             <input placeholder="Name" type="text" name="name" required>
             <input type="email" type="email" placeholder="Enter email" required>
             <textarea placeholder="Your Message" type="text" name="message"></textarea>
-            <input class="button" type="submit" id="submit" value=SUBMIT>
+            <div class="section-contact-button">
+                <input class="button" type="submit" id="submit" value=SUBMIT>
+            </div>
         </div>
 	</div>
 </div

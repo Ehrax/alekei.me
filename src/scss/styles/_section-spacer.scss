@@ -1,4 +1,4 @@
-$padding: 75px;
+$padding: 100px;
 $svg-widht: 400px;
 
 .section-spacer {
@@ -9,7 +9,7 @@ $svg-widht: 400px;
     padding-bottom: $padding;
 
     h3 {
-        font-family: $secondary-font;
+        font-family: $pirmary-font;
         margin: 20px 0 10px 0;
         color: $secondary-color;
     }
@@ -17,6 +17,10 @@ $svg-widht: 400px;
     .section-spacer-content {
         text-align: center;
         max-width: 250px;
+
+        p {
+            font-weight: 300;
+        }
     }
 
     @media screen and (max-width: $breakpoint-small) {

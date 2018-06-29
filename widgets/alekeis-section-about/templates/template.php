@@ -18,7 +18,7 @@
         </div>
             <div class="toolbox">
                 <div class="uk-grid-collapse items" uk-grid>
-                    <div>
+                    <!-- <div>
                         <i class="devicon-android-plain-wordmark"></i>
                     </div>
                     <div>
@@ -71,8 +71,34 @@
                     </div>
                     <div>
                         <i class="devicon-python-plain-wordmark"></i>
-                    </div>
+                    </div> -->
+                    <?php 
+                    $devicons = get_devicons($instance, $args);
+                    if(count(devicons) != 0): ?>
+                        <?php foreach($devicons as $icon):?>
+                            <div>
+                                <i class="<?php echo $icon ?>"></i>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php endif;?>
                 </div>
             </div>
     </div>
 </div>
+
+<?php 
+    function get_devicons($instance, $args) {
+        $devicons = array();
+
+        if(!empty($instance['devicons'])) {
+            $repeater_items = $instance['devicons'];
+
+            foreach($repeater_items as $repeater_item ) {
+                $devicon_from_repeater = $repeater_item['devicon'];
+
+                $devicons[] = $devicon_from_repeater;
+            }
+        }
+        return $devicons;
+    }
+?>

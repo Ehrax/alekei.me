@@ -41,7 +41,18 @@ class Alekeis_Section_About extends SiteOrigin_Widget {
           'label' => __( 'Description on the left side of the About Page', 
                         'widget-form-fields-text-domain' ),
           'rows' => 10
-        )
+        ),
+        'devicons' => array(
+          'type' => 'repeater',
+          'label' => __( 'Add Devicon' , 'widget-form-fields-text-domain' ),
+          'item_name'  => __('Devicon', 'siteorigin-widgets' ),
+          'fields' => array(
+            'devicon' => array(
+              'type' => 'text',
+              'label' => __('Devicon Name', 'widget-form-fields-text-domain')
+            )
+          )
+        ),
       ),
 
       //The $base_folder path string.

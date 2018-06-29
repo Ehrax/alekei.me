@@ -19,22 +19,22 @@
 
 <?php 
     function get_section_content($instance, $args) {
-            $content = array();
+        $content = array();
 
-            if(!empty($instance['spacer_content'])) {
-                $repeater_items = $instance['spacer_content'];
-                foreach($repeater_items as $repeater_item ) {
-                    $icon_from_repeater = $repeater_item['icon'];
-                    $title_from_repeater = $repeater_item['title'];
-                    $description_from_repeater = $repeater_item['description'];
+        if(!empty($instance['spacer_content'])) {
+            $repeater_items = $instance['spacer_content'];
+            foreach($repeater_items as $repeater_item ) {
+                $icon_from_repeater = $repeater_item['icon'];
+                $title_from_repeater = $repeater_item['title'];
+                $description_from_repeater = $repeater_item['description'];
 
-                    $content[] = array(
-                        'icon' => $icon_from_repeater,
-                        'title' => $title_from_repeater,
-                        'description' => $description_from_repeater
-                    );
-                }
+                $content[] = array(
+                    'icon' => $icon_from_repeater,
+                    'title' => $title_from_repeater,
+                    'description' => $description_from_repeater
+                );
             }
-            return $content;
         }
+        return $content;
+    }
 ?>

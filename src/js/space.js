@@ -44,5 +44,5 @@ export function animatedSpace() {
         }
     });
 
-    space.play().bindTouch().bindMouse();
+    space.play().bindMouse();
 }

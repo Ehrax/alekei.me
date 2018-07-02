@@ -1,12 +1,20 @@
 $section-about-heading-left: 60px;
 
 .section-about {
-    text-align: center;
+    text-align: left;
+
+    @media screen and (max-width: $breakpoint-small) {
+        text-align: center;
+    }
 
     .content {
         margin: auto;
         padding: 15px;
-        max-width: 720px;
+        max-width: 900px;
+    }
+
+    .about-content {
+        margin-bottom: 60px;
     }
 
     .section-about-pic {
@@ -29,11 +37,13 @@ $section-about-heading-left: 60px;
     p {
         margin: 0;
         margin-top: 15px;
+        font-size: 20px;
+        font-weight: 300;
+        
     }
 
     h2 {
         font-family: $pirmary-font;
-        margin-bottom: 0;
-        margin-top: 15px;
+        margin-bottom: 25px;
     }
 }

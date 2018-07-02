@@ -4,12 +4,12 @@
 
 <div class="uk-section uk-section-default section-about ">
     <div class="content">
-        <div class="uk-child-width-expand@s uk-grid-small content" uk-grid>
+        <div class="uk-child-width-expand@s uk-grid-small about-content" uk-grid>
             <div class="uk-flex uk-flex-center">
                 <div class="section-about-pic" data-src="<?php echo wp_get_attachment_url( $img_right_id ); ?>" uk-img></div>
             </div>
             <div>
-                <h2>Who I am ?</h2>
+                <h2>Who am I ?</h2>
                 <p><?php echo wp_kses_post($instance['about_description']) ?></p>
             </div>
         </div>

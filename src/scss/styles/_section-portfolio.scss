@@ -1,29 +1,11 @@
 .section-portfolio {
-    max-width: 900px;
-    margin: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
 
-    .uk-slider, .uk-slider-items, li, .portfolio-picture {
-        height: 100%;
-    }
+    box-sizing: border-box;
 
-    .uk-slider {
-        .uk-slider-items {
-            li {
-                width: 100%;
-
-                .portfolio-picture {
-                    background-position: center;
-                    background-size: cover;
-                }
-            }
-        }
-
-        a {
-            color: $secondary-color;
-        }
-    }
+    margin-bottom: 130px;
+    margin-top: 20px;
 
     h3 {
         color: $primary-color;
@@ -32,27 +14,106 @@
 
     p {
         color: $primary-color;
-    }
 
-    .section-portfolio-content-left {
-        min-height: 300px;
-        width: 100%
-    }
-
-    .section-portfolio-content-right {
-        width: 100%;
-
-        a {
-            color: $blue;
-
-            &:hover {
-                color: $red;
-            }
-        }
+        font-size: 20px;
+        font-weight: 300;
     }
 
     .uk-badge {
         color: $secondary-color;
         background-color: $primary-color;
+    }
+
+    .previes {
+        box-sizing: border-box;
+    }
+
+    .preview {
+        .preview-bar {
+            background-color: $primary-color;
+            border-radius: 5px 5px 0 0;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+
+            span {
+                width: 12px;
+                height: 12px;
+                border-radius: 1000px;
+
+                &:nth-child(1) {
+                    background-color: $red;
+                    margin-right: 5px;
+                }
+
+                &:nth-child(2) {
+                    background-color: $orange;
+                    margin-right: 5px;
+                }
+
+                &:nth-child(3) {
+                    background-color: $green;
+                }
+            }
+        }
+
+        .preview-content {
+            border: 5px solid $primary-color;
+            box-sizing: border-box;
+
+        }
+
+        .img {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    .preview-desktop {
+        box-sizing: border-box;
+        width: 95%;
+
+        .preview-content {
+            height: 450px;
+        }
+
+        @media screen and (max-width: $breakpoint-medium) {  
+            height: 350px;
+        }
+
+        @media screen and (max-width: $breakpoint-small) { 
+
+            width: 100%;
+
+            .preview-content {
+                height: 250px;
+            }
+        }
+    }
+
+    .preview-mobile {
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        width: 35%;
+
+        .preview-content {
+            height: 400px;
+        }
+
+        .img {
+            background-position: top;
+        }
+    }
+
+    .content-right {
+        padding-left: 70px;
+        max-width: 600px;
+
+        @media screen and (max-width: $breakpoint-small) {
+            padding-left: 0;
+            text-align: center;
+        }
     }
 }

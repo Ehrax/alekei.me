@@ -29,10 +29,6 @@ class Alekeis_Section_Portfolio extends SiteOrigin_Widget {
 
       //The $form_options array, which describes the form fields used to configure SiteOrigin widgets. We'll explain these in more detail later.
       array(
-        'position' => array(
-          'type' => 'checkbox',
-          'label' => __( 'Left (unchecked) or Right? (checked)', 'widget-form-fields-text-domain' ),
-        ),
         'title' => array(
           'type' => 'text',
           'label' => __('Project Title', 'widget-form-fields-text-domain')
@@ -41,19 +37,19 @@ class Alekeis_Section_Portfolio extends SiteOrigin_Widget {
           'type' => 'text',
           'label' => __('Project Url', 'widget-form-fields-text-domain')
         ),
-        'image_repeater' => array(
-          'type' => 'repeater',
-          'label' => __( 'Add more images' , 'widget-form-fields-text-domain' ),
-          'item_name'  => __( 'Project Image', 'siteorigin-widgets' ),
-          'fields' => array(
-            'image' => array(
-              'type' => 'media',
-                'label' => __( 'Choose a Project image', 'widget-form-fields-text-domain' ),
-                'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
-                'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
-                'library' => 'image',
-            )
-          )
+        'dekstop_image' => array(
+          'type' => 'media',
+          'label' => __( 'Choose the dekstop image', 'widget-form-fields-text-domain' ),
+          'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
+          'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
+          'library' => 'image',
+        ), 
+        'mobile_image' => array(
+          'type' => 'media',
+          'label' => __( 'Choose a mobile image', 'widget-form-fields-text-domain' ),
+          'choose' => __( 'Choose image', 'widget-form-fields-text-domain' ),
+          'update' => __( 'Set image', 'widget-form-fields-text-domain' ),
+          'library' => 'image',
         ),
         'description' => array(
           'type' => 'textarea',

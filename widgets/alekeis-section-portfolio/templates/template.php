@@ -1,37 +1,53 @@
-<div class="uk-section uk-section-default section-portfolio <?php if(wp_kses_post($instance['position'])): // TODO  ?><?php endif;?>">
-    <div class="container">
-        <div class="uk-child-width-expand@s uk-grid-small" uk-grid>
-            <div class="section-portfolio-content-left">
-                <div class="uk-position-relative " uk-slider="center: true">
-                    <ul class="uk-slider-items uk-child-width-1-2">
-                        <?php 
-                            $images = get_img_variables($instance, $args);
-                            if(count($images) != 0): ?>
-                            <?php foreach($images as $img): ?>
-                                <li uk-lightbox>
-                                    <div class="portfolio-picture" data-src="<?php echo wp_get_attachment_url($img); ?>" uk-img></div>
-                                </li>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </ul>
-                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+<?php 
+    $desktop_image = wp_kses_post($instance['dekstop_image']);
+    $mobile_image = wp_kses_post($instance['mobile_image']);
+
+    $title =  wp_kses_post($instance['title']);
+    $description = wp_kses_post($instance['description']);
+    $url = wp_kses_post($instance['url']);
+
+    $techs = get_tech_variables($instance, $args);
+?>
+
+<div class="section-portfolio">
+    <div class="uk-child-width-expand@s" uk-grid>
+        <a href="http://<?php echo $url; ?>" target="_blank">
+            <div class="content-left">
+                <div class="previes uk-position-relative">
+                    <div class="preview preview-desktop">
+                        <div class="preview-bar uk-flex">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="preview-content">
+                            <div class="img" data-src="<?php echo wp_get_attachment_url($desktop_image); ?>" uk-img></div>
+                        </div>
+                    </div>
+                    <div class="preview preview-mobile uk-visible@l">
+                        <div class="preview-bar uk-flex">
+                            <span> </span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="preview-content">
+                            <div class="img" data-src="<?php echo wp_get_attachment_url($mobile_image); ?>" uk-img></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="section-portfolio-content-right">
-                <h3><?php echo wp_kses_post($instance['title']); ?></h3>
-                <p><?php echo wp_kses_post($instance['description'])?>
-                <?php if(count(wp_kses_post($instance['url'])) != 0): ?>
-                    <a href="http://<?php echo wp_kses_post($instance['url'])?>" target="_blank">View</a>
-                    <br></p>
+        </a>
+        <div class="content-right uk-flex uk-flex-center uk-flex-column">
+            <h1><?php echo $title ?></h1>
+            <div class="description">
+                <p><?php echo $description ?></p>
+            </div>
+            <div>
+                <?php if(!empty($techs)): ?>
+                    <?php foreach($techs as $tech): ?>
+                        <span class="uk-badge"><?php echo $tech ?></span>
+                    <?php endforeach; ?>
                 <?php endif; ?>
-                <?php 
-                    $techs_used = get_tech_variables($instance, $args);
-                    if (count($techs_used) != 0): ?>
-                        <?php foreach($techs_used as $tech):?>
-                            <span class="uk-badge"><?php echo $tech; ?></span>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
             </div>
         </div>
     </div>
@@ -39,22 +55,6 @@
 
                 
 <?php
-    function get_img_variables( $instance, $args ) {
-        $images = array();
-
-        // Ensure that the repeater is available and not empty.
-        if (!empty($instance['image_repeater'] ) ) {
-            $repeater_items = $instance['image_repeater'];
-
-            foreach($repeater_items as $repeater_item ) {
-                $img_from_repeater = $repeater_item['image'];
-                $images[] = $img_from_repeater;
-            }
-        }
-
-        return $images;
-    }
-
     function get_tech_variables($instance, $args) {
         $techs_used = array();
 

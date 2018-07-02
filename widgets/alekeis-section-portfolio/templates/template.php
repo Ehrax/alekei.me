@@ -1,4 +1,4 @@
-<div class="uk-section uk-section-default section-portfolio  <?php if(wp_kses_post($instance['position'])): // TODO  ?><?php endif;?>" uk-height-viewport="offset-top: true">
+<div class="uk-section uk-section-default section-portfolio <?php if(wp_kses_post($instance['position'])): // TODO  ?><?php endif;?>">
     <div class="container">
         <div class="uk-child-width-expand@s uk-grid-small" uk-grid>
             <div class="section-portfolio-content-left">
